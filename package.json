@@ -2,6 +2,7 @@
   "name": "quizzical",
   "version": "0.1.0",
   "private": true,
+  "homepage":"https://tk-kushal.github.io/quizzical",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.3.0",
@@ -12,6 +13,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "deploy": "gh-pages -d dist",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
