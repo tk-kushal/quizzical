@@ -26,7 +26,7 @@ function App() {
           setQuestionsData(data.results)
         })
     }
-  }, [game])
+  }, [game, apiKey])
 
   function start(key) {
     setApiKey(key)
@@ -94,7 +94,7 @@ function App() {
 
   React.useEffect(() => {
     setQuestions(qes)
-  }, [questionsData])
+  }, [questionsData,qes])
 
   const questionsElements = questions.map((question) => {
     return (
@@ -113,7 +113,7 @@ function App() {
     setScore(() => {
       let score = 0
       for (let i = 0; i < questions.length; i++) {
-        if (questions[i].Selected == questions[i].correct) {
+        if (questions[i].Selected === questions[i].correct) {
           score++
         }
       }
